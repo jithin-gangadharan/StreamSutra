@@ -95,53 +95,38 @@ header h1 {
     padding: 10px;
     border: none;
     border-radius: 8px;
-    font-size: 0.9rem;
     cursor: pointer;
+    background-color: transparent;
+    font-size: 1.5rem;
     transition: 0.3s;
-    font-weight: bold;
 }
 
 button.like {
     color: #4caf50;
-    background-color: #f0f4c3;
-}
-
-button.like:hover {
-    background-color: #8bc34a;
-    color: #fff;
 }
 
 button.dislike {
     color: #f44336;
-    background-color: #ffcdd2;
 }
 
-button.dislike:hover {
-    background-color: #f44336;
-    color: #fff;
-}
-
-/* Favorite Button */
 button.favorite {
     color: #ffeb3b;
-    background-color: #4a1d7d;
-    border: 2px solid #ffeb3b;
-    transition: all 0.3s ease;
 }
 
-button.favorite.active {
-    color: #fff;
-    background-color: #ffeb3b;
+button.active {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
 }
 
-button.favorite:hover {
-    background-color: #ffeb3b;
-    color: #4a1d7d;
+/* Animation on Click */
+button.like:active, button.dislike:active, button.favorite:active {
+    animation: pop 0.2s ease-in-out forwards;
 }
 
-/* Hover Animation on Buttons */
-.release-card .actions button:hover {
-    transform: scale(1.1);
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
 }
 
 /* Media Queries for Responsiveness */
