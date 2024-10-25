@@ -1,0 +1,62 @@
+/* Basic styling for layout and components */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#release-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.release-card {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.release-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.release-card h3 {
+    margin: 10px 0;
+}
+
+.release-card .actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.release-card .actions button {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.like {
+    color: #4caf50;
+}
+
+button.dislike {
+    color: #f44336;
+}
