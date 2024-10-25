@@ -1,62 +1,161 @@
-/* Basic styling for layout and components */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff4b7d);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styling */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+header h1 {
+    font-size: 2.5rem;
+    color: #ffecb3;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Main Section for Cards */
 #release-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 30px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
 }
 
+/* Release Card Styling */
 .release-card {
-    background-color: #fff;
-    width: 250px;
-    border-radius: 10px;
+    background: linear-gradient(145deg, #d36cff, #7b3eff);
+    color: #fff;
+    width: 270px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
     text-align: center;
+    position: relative;
 }
 
+.release-card:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Styling */
 .release-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
+/* Title Styling */
 .release-card h3 {
+    font-size: 1.5rem;
     margin: 10px 0;
+    color: #ffeb3b;
 }
 
+/* Card Content */
+.release-card p {
+    font-size: 0.9rem;
+    margin: 8px 0;
+}
+
+/* Actions Section */
 .release-card .actions {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 15px 0;
+    background: #4a1d7d;
+    border-top: 1px solid #ffeb3b;
 }
 
 .release-card .actions button {
-    padding: 5px;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 0.9rem;
     cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
 button.like {
     color: #4caf50;
+    background-color: #f0f4c3;
+}
+
+button.like:hover {
+    background-color: #8bc34a;
+    color: #fff;
 }
 
 button.dislike {
     color: #f44336;
+    background-color: #ffcdd2;
+}
+
+button.dislike:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+/* Favorite Button */
+button.favorite {
+    color: #ffeb3b;
+    background-color: #4a1d7d;
+    border: 2px solid #ffeb3b;
+    transition: all 0.3s ease;
+}
+
+button.favorite.active {
+    color: #fff;
+    background-color: #ffeb3b;
+}
+
+button.favorite:hover {
+    background-color: #ffeb3b;
+    color: #4a1d7d;
+}
+
+/* Hover Animation on Buttons */
+.release-card .actions button:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #release-list {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .release-card {
+        width: 90%;
+    }
 }
