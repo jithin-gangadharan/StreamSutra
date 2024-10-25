@@ -1,3 +1,15 @@
+// Functions to manage favorites in cookies
+const getFavorites = () => {
+    const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('favorites='));
+    return cookieValue ? JSON.parse(decodeURIComponent(cookieValue.split('=')[1])) : [];
+};
+
+const setFavorites = (favorites) => {
+    document.cookie = `favorites=${encodeURIComponent(JSON.stringify(favorites))}; path=/; max-age=${60 * 60 * 24 * 7}`;
+};
+
 // Load data and generate cards
 document.addEventListener("DOMContentLoaded", () => {
     fetch('./data/releases.json')
@@ -57,14 +69,3 @@ const toggleFavorite = (id, title) => {
     setFavorites(favorites);
 };
 
-// Functions to manage favorites in cookies
-const getFavorites = () => {
-    const cookieValue = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('favorites='));
-    return cookieValue ? JSON.parse(decodeURIComponent(cookieValue.split('=')[1])) : [];
-};
-
-const setFavorites = (favorites) => {
-    document.cookie = `favorites=${encodeURIComponent(JSON.stringify(favorites))}; path=/; max-age=${60 * 60 * 24 * 7}`;
-};
