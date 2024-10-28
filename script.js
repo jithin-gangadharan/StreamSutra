@@ -30,18 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
-// Function to check if a movie is in favorites
-const checkFavorite = (id) => {
-    const favorites = getFavorites();
-    return favorites.includes(id.toString());
-};
-
 // Function to handle "like" button animation and toggle
 const handleLike = (id) => {
     const likeButton = document.getElementById(`like-${id}`);
     likeButton.classList.toggle("active");
     likeButton.classList.add("clicked");
     setTimeout(() => likeButton.classList.remove("clicked"), 200);
+
+    // Remove active state from dislike if like is active
+    const dislikeButton = document.getElementById(`dislike-${id}`);
+    if (likeButton.classList.contains("active")) {
+        dislikeButton.classList.remove("active");
+    }
 };
 
 // Function to handle "dislike" button animation and toggle
@@ -50,6 +50,12 @@ const handleDislike = (id) => {
     dislikeButton.classList.toggle("active");
     dislikeButton.classList.add("clicked");
     setTimeout(() => dislikeButton.classList.remove("clicked"), 200);
+
+    // Remove active state from like if dislike is active
+    const likeButton = document.getElementById(`like-${id}`);
+    if (dislikeButton.classList.contains("active")) {
+        likeButton.classList.remove("active");
+    }
 };
 
 // Function to toggle "favorite" status, animate button, and store in cookies
