@@ -3,16 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTT Aggregator</title>
+    <title>RPA UiPath Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Weekly OTT Releases</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">RPA UiPath Services</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="#job-support">Job Support</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-light">
+        <div class="container">
+            <h1>Empowering RPA Solutions & Training</h1>
+            <p>Professional RPA Services, Job Support, and Courses</p>
+            <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+        </div>
     </header>
-    <main id="release-list">
-        <!-- Movie and Series cards will be generated here by JavaScript -->
-    </main>
+
+    <!-- Services Section -->
+    <section id="services" class="container my-5">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">RPA Freelancing</h3>
+                        <p class="card-text">Customized RPA solutions for various industries.</p>
+                        <a href="#freelancing" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">RPA Courses</h3>
+                        <p class="card-text">Courses for every level, from beginner to advanced.</p>
+                        <a href="#courses" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Job Support</h3>
+                        <p class="card-text">Flexible job support services in any timezone.</p>
+                        <a href="#job-support" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="container my-5">
+        <h2 class="text-center">RPA Courses</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Course Overview</h3>
+                <p>Comprehensive UiPath courses tailored to your needs.</p>
+                <ul>
+                    <li>Beginner Level - Introduction to UiPath</li>
+                    <li>Intermediate Level - Workflow Automation</li>
+                    <li>Advanced Level - Complex Automation Projects</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Fees & Certifications</h3>
+                <p>Transparent fee structure with certification upon completion.</p>
+                <p>FAQs, reviews, and ratings are available for all courses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Support Section -->
+    <section id="job-support" class="container my-5">
+        <h2 class="text-center">RPA Job Support</h2>
+        <p>Offering flexible job support services worldwide with hourly pricing.</p>
+        <p>Connect with experts who can assist you on projects, troubleshoot issues, and enhance your skills.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-light">
+        <p>&copy; 2024 RPA UiPath Services. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
