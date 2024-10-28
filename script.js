@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach(item => {
                 const card = document.createElement('div');
                 card.classList.add('release-card');
+                
+                // Check if the movie is already in favorites
                 const isFavorite = checkFavorite(item.id);
 
                 card.innerHTML = `
@@ -27,6 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 });
+
+// Function to check if a movie is in favorites
+const checkFavorite = (id) => {
+    const favorites = getFavorites();
+    return favorites.includes(id.toString());
+};
 
 // Function to handle "like" button animation and toggle
 const handleLike = (id) => {
