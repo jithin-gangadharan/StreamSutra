@@ -161,3 +161,41 @@ button.active {
     transform: scale(1.2);
 }
 
+/* Like, Dislike, Favorite Buttons Default Colors */
+button.like {
+    color: #4caf50; /* Default green for like */
+}
+
+button.dislike {
+    color: #f44336; /* Default red for dislike */
+}
+
+button.favorite {
+    color: #ffeb3b; /* Default yellow for favorite */
+}
+
+/* Active States for Buttons */
+button.like.active {
+    color: #4caf50; /* Green when liked */
+}
+
+button.dislike.active {
+    color: #f44336; /* Red when disliked */
+}
+
+button.favorite.active {
+    color: #9b59b6; /* Purple when favorited */
+}
+
+/* Button Animation */
+button.clicked {
+    animation: pop 0.2s ease-in-out forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+
