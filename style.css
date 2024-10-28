@@ -144,3 +144,20 @@ button.like:active, button.dislike:active, button.favorite:active {
         width: 90%;
     }
 }
+
+/* Button Animation */
+button.clicked {
+    animation: pop 0.2s ease-in-out forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+/* Button Active States */
+button.active {
+    transform: scale(1.2);
+}
+
