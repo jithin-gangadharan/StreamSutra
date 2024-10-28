@@ -1,201 +1,40 @@
-/* General Reset */
+/* Basic reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff4b7d);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
 }
 
-/* Header Styling */
-header {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #ffecb3;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.hero-section p {
+    font-size: 1.25em;
 }
 
-/* Main Section for Cards */
-#release-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
-    width: 100%;
-    max-width: 1200px;
+/* Section Styles */
+section {
+    padding: 60px 0;
 }
 
-/* Release Card Styling */
-.release-card {
-    background: linear-gradient(145deg, #d36cff, #7b3eff);
-    color: #fff;
-    width: 270px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-    position: relative;
+.card {
+    transition: transform 0.2s;
 }
 
-.release-card:hover {
-    transform: scale(1.05) rotate(-2deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+.card:hover {
+    transform: scale(1.05);
 }
 
-/* Image Styling */
-.release-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+footer {
+    font-size: 0.9em;
 }
-
-/* Title Styling */
-.release-card h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: #ffeb3b;
-}
-
-/* Card Content */
-.release-card p {
-    font-size: 0.9rem;
-    margin: 8px 0;
-}
-
-/* Actions Section */
-.release-card .actions {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
-    background: #4a1d7d;
-    border-top: 1px solid #ffeb3b;
-}
-
-.release-card .actions button {
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 1.5rem;
-    transition: 0.3s;
-}
-
-button.like {
-    color: #4caf50;
-}
-
-button.dislike {
-    color: #f44336;
-}
-
-button.favorite {
-    color: #ffeb3b;
-}
-
-button.active {
-    transform: scale(1.2);
-    transition: transform 0.2s ease;
-}
-
-/* Animation on Click */
-button.like:active, button.dislike:active, button.favorite:active {
-    animation: pop 0.2s ease-in-out forwards;
-}
-
-@keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.4); }
-    100% { transform: scale(1); }
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    #release-list {
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .release-card {
-        width: 90%;
-    }
-}
-
-/* Button Animation */
-button.clicked {
-    animation: pop 0.2s ease-in-out forwards;
-}
-
-@keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.4); }
-    100% { transform: scale(1); }
-}
-
-/* Button Active States */
-button.active {
-    transform: scale(1.2);
-}
-
-/* Like, Dislike, Favorite Buttons Default Colors */
-button.like {
-    color: #4caf50; /* Default green for like */
-}
-
-button.dislike {
-    color: #f44336; /* Default red for dislike */
-}
-
-button.favorite {
-    color: #ffeb3b; /* Default yellow for favorite */
-}
-
-/* Active States for Buttons */
-button.like.active {
-    color: #4caf50; /* Green when liked */
-}
-
-button.dislike.active {
-    color: #f44336; /* Red when disliked */
-}
-
-button.favorite.active {
-    color: #9b59b6; /* Purple when favorited */
-}
-
-/* Button Animation */
-button.clicked {
-    animation: pop 0.2s ease-in-out forwards;
-}
-
-@keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.4); }
-    100% { transform: scale(1); }
-}
-
-
